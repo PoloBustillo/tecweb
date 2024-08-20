@@ -6,5 +6,7 @@
 
 3. Materia: **Tecnologías Web**
 
-Materia, Periodo y una Descripción breve del propósito del repositorio.
+4. Periodo: **Otoño 2024**
+
+y una Descripción breve del propósito del repositorio.
 NOTA: Debe realizarse un commit por cada dato almacenado en el archivo README.md, es decir, cinco commits más el commit creado por defecto con el repositorio central.
