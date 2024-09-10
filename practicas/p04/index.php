@@ -54,48 +54,99 @@ unset($a, $b, $c);
 echo("<br />");
 echo("<br />");
 
+echo("<h2>Ejercicio 3</h2>");
 $a = "PHP5";
-print_r($a . "\n"); // ¿Qué valor tiene $a? La respuesta es PHP5 porque $a es "PHP5".
+echo("<div>$a </div>"); // ¿Qué valor tiene $a? La respuesta es PHP5 porque $a es "PHP5".
+echo('¿Qué valor tiene $a? La respuesta es PHP5 porque $a es "PHP5"');
 $z[] = &$a;
-print_r($z . "\n"); // ¿Qué valor tiene $z? La respuesta es PHP5 porque $z es un array que contiene una referencia a $a.
+echo("<div>$z[0] </div>"); // ¿Qué valor tiene $z? La respuesta es PHP5 porque $z es un array que contiene una referencia a $a.
+echo('¿Qué valor tiene $z? La respuesta es PHP5 porque $z es un array que contiene una referencia a $a');
 $b = "5a version de PHP";
-print_r($b . "\n"); // ¿Qué valor tiene $b? La respuesta es 5a version de PHP porque $b es "5a version de PHP".
+echo("<div>$b </div>"); // ¿Qué valor tiene $b? La respuesta es 5a version de PHP porque $b es "5a version de PHP".
+echo('¿Qué valor tiene $b? La respuesta es 5a version de PHP porque $b es "5a version de PHP"');
 $c = $b*10;
-print_r($c . "\n"); // ¿Qué valor tiene $c? La respuesta es Warning: A non-numeric value porque $b no es un número.
+echo("<div>$c </div>"); // ¿Qué valor tiene $c? La respuesta es 50 porque $b es "5a version de PHP".
+echo('¿Qué valor tiene $c? La respuesta es 50 porque $b es "5a version de PHP"');
 $a .= $b;
-print_r($a . "\n"); // ¿Qué valor tiene $a? La respuesta es PHP55a version de PHP porque $a es "PHP5" y $b es "5a version de PHP".
+echo("<div>$a </div>"); // ¿Qué valor tiene $a? La respuesta es PHP55a version de PHP porque $a es "PHP5" y $b es "5a version de PHP".
+echo('¿Qué valor tiene $a? La respuesta es PHP55a version de PHP porque $a es "PHP5" y $b es "5a version de PHP"');
 $b *= $c;
-print_r($b . "\n"); // ¿Qué valor tiene $b? La respuesta es Warning: A non-numeric value porque $b no es un número.
+echo("<div>$b </div>"); // ¿Qué valor tiene $b? La respuesta es 250 porque $b es "5a version de PHP".
+echo('¿Qué valor tiene $b? La respuesta es 250 porque $b es "5a version de PHP"');
 $z[0] = "MySQL";
-print_r($z . "\n"); // ¿Qué valor tiene $z? La respuesta es MySQL porque $z es un array que contiene una referencia a $a.
+echo("<div>$z[0] </div>"); // ¿Qué valor tiene $z? La respuesta es MySQL porque $z es un array que contiene una referencia a $a.
+echo('¿Qué valor tiene $z? La respuesta es MySQL porque $z es un array que contiene una referencia a $a');
 
 unset($a, $b, $c, $z);
+echo("<br />");
+echo("<br />");
 
+echo("<h2>Ejercicio 4 GLOBALS</h2>");
 $GLOBALS['a'] = "PHP5";
-print_r($GLOBALS['a'] . "\n"); // ¿Qué valor tiene $a? La respuesta es PHP5 porque $a es "PHP5".
+echo("<div>" . $GLOBALS['a'] . "</div>"); // ¿Qué valor tiene $a? La respuesta es PHP5 porque $a es "PHP5".
+echo('¿Qué valor tiene $a? La respuesta es PHP5 porque $a es "PHP5"');
 $GLOBALS['z'][] = &$GLOBALS['a'];
-print_r($GLOBALS['z'] . "\n"); // ¿Qué valor tiene $z? La respuesta es PHP5 porque $z es un array que contiene una referencia a $a.
+echo("<div>" . $GLOBALS['z'][0] . "</div>"); // ¿Qué valor tiene $z? La respuesta es PHP5 porque $z es un array que contiene una referencia a $a.
+echo('¿Qué valor tiene $z? La respuesta es PHP5 porque $z es un array que contiene una referencia a $a');
 $GLOBALS['b'] = "5a version de PHP";
-print_r($GLOBALS['b'] . "\n"); // ¿Qué valor tiene $b? La respuesta es 5a version de PHP porque $b es "5a version de PHP".
+echo("<div>" . $GLOBALS['b'] . "</div>"); // ¿Qué valor tiene $b? La respuesta es 5a version de PHP porque $b es "5a version de PHP".
+echo('¿Qué valor tiene $b? La respuesta es 5a version de PHP porque $b es "5a version de PHP"');
 $GLOBALS['c'] = $GLOBALS['b'] * 10;
-print_r($GLOBALS['c'] . "\n"); // ¿Qué valor tiene $c? La respuesta es Warning: A non-numeric value porque $b no es un número.
+echo("<div>" . $GLOBALS['c'] . "</div>"); // ¿Qué valor tiene $c? La respuesta es 50 porque $b es "5a version de PHP".
+echo('¿Qué valor tiene $c? La respuesta es 50 porque $b es "5a version de PHP"');
 $GLOBALS['a'] .= $GLOBALS['b'];
-print_r($GLOBALS['a'] . "\n"); // ¿Qué valor tiene $a? La respuesta es PHP55a version de PHP porque $a es "PHP5" y $b es "5a version de PHP".
+echo("<div>" . $GLOBALS['a'] . "</div>"); // ¿Qué valor tiene $a? La respuesta es PHP55a version de PHP porque $a es "PHP5" y $b es "5a version de PHP".
+echo('¿Qué valor tiene $a? La respuesta es PHP55a version de PHP porque $a es "PHP5" y $b es "5a version de PHP"');
 $GLOBALS['b'] *= $GLOBALS['c'];
-print_r($GLOBALS['b'] . "\n"); // ¿Qué valor tiene $b? La respuesta es Warning: A non-numeric value porque $b no es un número.
+echo("<div>" . $GLOBALS['b'] . "</div>"); // ¿Qué valor tiene $b? La respuesta es 250 porque $b es "5a version de PHP".
+echo('¿Qué valor tiene $b? La respuesta es 250 porque $b es "5a version de PHP"');
 $GLOBALS['z'][0] = "MySQL";
-print_r($GLOBALS['z'] . "\n"); // ¿Qué valor tiene $z? La respuesta es MySQL porque $z es un array que contiene una referencia a $a.
+echo("<div>" . $GLOBALS['z'][0] . "</div>"); // ¿Qué valor tiene $z? La respuesta es MySQL porque $z es un array que contiene una referencia a $a.
+echo('¿Qué valor tiene $z? La respuesta es MySQL porque $z es un array que contiene una referencia a $a');
+echo("<br />");
+echo("<br />");
 
-unset($a, $b, $c, $z);
+echo("<h2>Ejercicio 5</h2>");
 
 $a = "7 personas";
-print_r($a . "\n"); // ¿Qué valor tiene $a? La respuesta es 7 personas porque $a es "7 personas".
+echo("<div>$a </div>"); // ¿Qué valor tiene $a? La respuesta es 7 personas porque $a es "7 personas".
+echo('¿Qué valor tiene $a? La respuesta es 7 personas porque $a es "7 personas"');
 $b = (integer) $a;
-print_r($b . "\n"); // ¿Qué valor tiene $b? La respuesta es 7 porque $b es un entero.
+echo("<div>$b </div>"); // ¿Qué valor tiene $b? La respuesta es 7 porque $b es un número entero.
+echo('¿Qué valor tiene $b? La respuesta es 7 porque $b es un número entero');
 $a = "9E3";
-print_r($a . "\n"); // ¿Qué valor tiene $a? La respuesta es 9E3 porque $a es "9E3".
+echo("<div>$a </div>"); // ¿Qué valor tiene $a? La respuesta es 9E3 porque $a es "9E3".
+echo('¿Qué valor tiene $a? La respuesta es 9E3 porque $a es "9E3"');
 $c = (double) $a;
-print_r($c . "\n"); // ¿Qué valor tiene $c? La respuesta es 9000 porque $c es un número decimal.
+echo("<div>$c </div>"); // ¿Qué valor tiene $c? La respuesta es 9000 porque $c es un número decimal.
+echo('¿Qué valor tiene $c? La respuesta es 9000 porque $c es un número decimal');
+unset($a, $b, $c);
+echo("<br />");
+echo("<br />");
+
+$a = "0";
+$b = "TRUE";
+$c = FALSE;
+$d = ($a OR $b);
+$e = ($a AND $c);
+$f = ($a XOR $b);
+echo("<h2>Ejercicio 6</h2>");
+echo '<h2>Valores Booleanos</h2>';
+echo '<ul>';
+echo '<li>$a: '; var_dump($a); echo '</li>';
+echo '<li>$b: '; var_dump($b); echo '</li>';
+echo '<li>$c: '; var_dump($c); echo '</li>';
+echo '<li>$d: '; var_dump($d); echo '</li>';
+echo '<li>$e: '; var_dump($e); echo '</li>';
+echo '<li>$f: '; var_dump($f); echo '</li>';
+echo '</ul>';
+
+echo '<h2>Transformar valores booleanos var_export</h2>';
+echo '<ul>';
+echo '<li>$c: ' . var_export($c, true) . '</li>';
+echo '<li>$e: ' . var_export($e, true) . '</li>';
+echo '</ul>';
+unset($a, $b, $c, $d, $e, $f);
 ?>
 </body>
 </html>
