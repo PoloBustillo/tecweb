@@ -33,15 +33,26 @@ echo '</ul>';
 $a = "ManejadorSQL";
 $b = 'MySQL';
 $c = &$a;
-print_r($a . "\n"); // ¿Qué valor tiene $a? La respuesta es ManejadorSQL porque $a es "ManejadorSQL".
-print_r($b . "\n"); // ¿Qué valor tiene $b? La respuesta es MySQL porque $b es 'MySQL'.
-print_r($c . "\n"); // ¿Qué valor tiene $c? La respuesta es ManejadorSQL porque $c es una referencia a $a.
+echo("<h2>Ejercicio 2</h2>");
+echo("<div>$a </div>"); // ¿Qué valor tiene $a? La respuesta es ManejadorSQL porque $a es "ManejadorSQL".
+echo('¿Qué valor tiene $a? La respuesta es ManejadorSQL porque $a es "ManejadorSQL"');
+echo("<div>$b </div>"); // ¿Qué valor tiene $b? La respuesta es MySQL porque $b es 'MySQL'.
+echo('¿Qué valor tiene $b? La respuesta es MySQL porque $b es \'MySQL\'');
+echo("<div>$c </div>"); // ¿Qué valor tiene $c? La respuesta es ManejadorSQL porque $c es una referencia a $a.
+echo('¿Qué valor tiene $c? La respuesta es ManejadorSQL porque $c es una referencia a $a');
+echo("<br />");
+echo("<br />");
+
 $a = "PHP server";
 $b = &$a;
-print_r($a . "\n"); // ¿Qué valor tiene $a? La respuesta es PHP server porque $a es "PHP server".
-print_r($b . "\n"); // ¿Qué valor tiene $b? La respuesta es PHP server porque $b es una referencia a $a.
+echo("<div>$a </div>"); // ¿Qué valor tiene $a? La respuesta es PHP server porque $a es "PHP server".
+echo('¿Qué valor tiene $a? La respuesta es PHP server porque $a es "PHP server"');
+echo("<div>$b </div>"); // ¿Qué valor tiene $b? La respuesta es PHP server porque $b es una referencia a $a.
+echo('¿Qué valor tiene $b? La respuesta es PHP server porque $b es una referencia a $a');
 
 unset($a, $b, $c);
+echo("<br />");
+echo("<br />");
 
 $a = "PHP5";
 print_r($a . "\n"); // ¿Qué valor tiene $a? La respuesta es PHP5 porque $a es "PHP5".
