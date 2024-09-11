@@ -64,13 +64,13 @@ echo('¿Qué valor tiene $z? La respuesta es PHP5 porque $z es un array que cont
 $b = "5a version de PHP";
 echo("<div>$b </div>"); // ¿Qué valor tiene $b? La respuesta es 5a version de PHP porque $b es "5a version de PHP".
 echo('¿Qué valor tiene $b? La respuesta es 5a version de PHP porque $b es "5a version de PHP"');
-$c = $b*10;
+@$c = $b*10;
 echo("<div>$c </div>"); // ¿Qué valor tiene $c? La respuesta es 50 porque $b es "5a version de PHP".
 echo('¿Qué valor tiene $c? La respuesta es 50 porque $b es "5a version de PHP"');
 $a .= $b;
 echo("<div>$a </div>"); // ¿Qué valor tiene $a? La respuesta es PHP55a version de PHP porque $a es "PHP5" y $b es "5a version de PHP".
 echo('¿Qué valor tiene $a? La respuesta es PHP55a version de PHP porque $a es "PHP5" y $b es "5a version de PHP"');
-$b *= $c;
+@$b *= $c;
 echo("<div>$b </div>"); // ¿Qué valor tiene $b? La respuesta es 250 porque $b es "5a version de PHP".
 echo('¿Qué valor tiene $b? La respuesta es 250 porque $b es "5a version de PHP"');
 $z[0] = "MySQL";
@@ -91,13 +91,13 @@ echo('¿Qué valor tiene $z? La respuesta es PHP5 porque $z es un array que cont
 $GLOBALS['b'] = "5a version de PHP";
 echo("<div>" . $GLOBALS['b'] . "</div>"); // ¿Qué valor tiene $b? La respuesta es 5a version de PHP porque $b es "5a version de PHP".
 echo('¿Qué valor tiene $b? La respuesta es 5a version de PHP porque $b es "5a version de PHP"');
-$GLOBALS['c'] = $GLOBALS['b'] * 10;
+@$GLOBALS['c'] = $GLOBALS['b'] * 10;
 echo("<div>" . $GLOBALS['c'] . "</div>"); // ¿Qué valor tiene $c? La respuesta es 50 porque $b es "5a version de PHP".
 echo('¿Qué valor tiene $c? La respuesta es 50 porque $b es "5a version de PHP"');
 $GLOBALS['a'] .= $GLOBALS['b'];
 echo("<div>" . $GLOBALS['a'] . "</div>"); // ¿Qué valor tiene $a? La respuesta es PHP55a version de PHP porque $a es "PHP5" y $b es "5a version de PHP".
 echo('¿Qué valor tiene $a? La respuesta es PHP55a version de PHP porque $a es "PHP5" y $b es "5a version de PHP"');
-$GLOBALS['b'] *= $GLOBALS['c'];
+@$GLOBALS['b'] *= $GLOBALS['c'];
 echo("<div>" . $GLOBALS['b'] . "</div>"); // ¿Qué valor tiene $b? La respuesta es 250 porque $b es "5a version de PHP".
 echo('¿Qué valor tiene $b? La respuesta es 250 porque $b es "5a version de PHP"');
 $GLOBALS['z'][0] = "MySQL";
